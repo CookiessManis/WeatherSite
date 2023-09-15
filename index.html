@@ -41,7 +41,12 @@
     <p class="error text-center text-sm text-yellow-300 pt-2 hidden">
       Invalid City Name!
     </p>
-    <img src="img/clouds.png" class="w-40 mx-auto pt-10 weather-icon" alt="" />
+    <img
+      src="img/clear.png"
+      class="weather-icon w-40 mx-auto pt-10 weather-icon"
+      alt=""
+    />
+
     <div class="text-center pt-10">
       <h1
         class="text-white text-3xl font-medium font-primary tracking-wide temp"
@@ -98,17 +103,17 @@
           document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
           if (data.weather[0].main == "Clouds") {
-            weatherIcon.href = "img/clouds.png";
+            weatherIcon.src = "img/clouds.png";
           } else if (data.weather[0].main == "Rain") {
-            weatherIcon.href = "img/rain.png";
+            weatherIcon.src = "img/rain.png";
           } else if (data.weather[0].main == "Drizzle") {
-            weatherIcon.href = "img/drizzle.png";
+            weatherIcon.src = "img/drizzle.png";
           } else if (data.weather[0].main == "Mist") {
-            weatherIcon.href = "img/mist.png";
+            weatherIcon.src = "img/mist.png";
           } else if (data.weather[0].main == "Snow") {
-            weatherIcon.href = "img/snow.png";
+            weatherIcon.src = "img/snow.png";
           } else if (data.weather[0].main == "Clear") {
-            weatherIcon.href = "img/clear.png";
+            weatherIcon.src = "img/clear.png";
           }
 
           document.querySelector(".error").style.display = "none";
